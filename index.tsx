@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { Devs } from "@utils/constants";
 import definePlugin from "@utils/types";
 import { User } from "@vencord/discord-types";
 import { React } from "@webpack/common";
@@ -14,7 +13,10 @@ import { UserChatButton } from "./components/UserChatButton";
 export default definePlugin({
     name: "ClickToChat",
     description: "Click to open direct message.",
-    authors: [Devs.nicola02nb],
+    authors: [{
+        name: "nicola02nb",
+        id: 257900031351193600n
+    }],
     patches: [
         {
             find: "\"avatarContainerClass\",\"userNameClassName\"",
