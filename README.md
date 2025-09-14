@@ -1,8 +1,8 @@
-# ClickToChat for Vencord
+# VoiceUserButtons for Vencord
 
-This is a porting of the original BetterDiscord(BD) plugin [ClickToChat](https://github.com/hobbica98/ClickToChat-BetterDiscord-Plugin).
+This is a porting of the original BetterDiscord(BD) plugin [ClickToChat](https://github.com/hobbica98/ClickToChat-BetterDiscord-Plugin), with added features.
 
-A Vencord(VC) plugin that adds a button next to peoples names in a voice chat that takes you to their dms.
+A Vencord(VC) plugin that adds buttons to quickly DM, mute, or deafen any user right from the voice-call panel.
 
 ## Preview
 

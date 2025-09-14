@@ -6,35 +6,33 @@
 
 import definePlugin from "@utils/types";
 import { User } from "@vencord/discord-types";
-import { React } from "@webpack/common";
+import { Flex, React } from "@webpack/common";
 
-import { UserChatButton } from "./components/UserChatButton";
+import { UserChatButton, UserDeafenButton, UserMuteButton } from "./components/UserChatButtons";
+import { settings } from "./settings";
 
 export default definePlugin({
-    name: "ClickToChat",
-    description: "Click to open direct message.",
-    authors: [{
-        name: "nicola02nb",
-        id: 257900031351193600n
-    }],
+    name: "VoiceUserButtons",
+    description: "Quickly DM, mute, or deafen any user right from the voice-call panel.",
+    authors: [{ name: "nicola02nb", id: 257900031351193600n }, { name: "omaw", id: 1155026301791514655n }],
+    settings,
     patches: [
         {
             find: "\"avatarContainerClass\",\"userNameClassName\"",
             replacement: {
                 match: /(\((\i),\i\){?=.{0,850}\.flipped])(:\i}\),children:\[)/,
-                replace: "$1$3$self.renderPing($2?.user),"
+                replace: "$1$3$self.renderButtons($2?.user),"
             }
         }
     ],
-    start: () => {
-    },
-    stop: () => {
-    },
-
-    renderPing(user?: User) {
+    renderButtons(user?: User) {
         if (!user) return null;
-        return <UserChatButton user={user} />;
+        return (
+            <Flex direction={Flex.Direction.HORIZONTAL} className="voice-user-buttons">
+                {settings.store.showChatButton && <UserChatButton user={user} />}
+                {settings.store.showMuteButton && <UserMuteButton user={user} />}
+                {settings.store.showDeafenButton && <UserDeafenButton user={user} />}
+            </Flex>
+        );
     }
 });
-
-
