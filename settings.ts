@@ -55,8 +55,8 @@ export const settings = definePluginSettings({
         description: "Choose whether to show nickname or username in tooltip.",
         restartNeeded: false,
         options: [
-            { label: "Global Setting", value: "global" },
-            { label: "Nickname", value: "nickname" },
+            { label: "Global Name", value: "global" },
+            { label: "Default Username", value: "username" },
             { label: "Both", value: "both" },
         ],
     }
