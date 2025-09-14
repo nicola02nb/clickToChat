@@ -40,7 +40,7 @@ export const settings = definePluginSettings({
     },
     showButtonsSelf: {
         type: OptionType.SELECT,
-        default: "disable",
+        default: "display",
         description: "Whether you want to display buttons for your own user. Same functionality as other button(s) except it'll open DMs panel and mute/deafen for yourself upon clicking button(s).",
         restartNeeded: true,
         options: [
@@ -51,7 +51,7 @@ export const settings = definePluginSettings({
     },
     whichNameToShow: {
         type: OptionType.SELECT,
-        default: "global",
+        default: "both",
         description: "Choose whether to show nickname or username in tooltip.",
         restartNeeded: false,
         options: [
