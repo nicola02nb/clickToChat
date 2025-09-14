@@ -6,4 +6,4 @@ A Vencord(VC) plugin that adds buttons to quickly DM, mute, or deafen any user r
 
 ## Preview
 
-<img width="270" height="118" alt="Screenshot 2025-09-08 155505" src="https://github.com/user-attachments/assets/45ad45a6-be82-4549-8c1a-0025d37b5f64" />
+<img width="292" height="123" alt="Screenshot 2025-09-14 151043" src="https://github.com/user-attachments/assets/8152b98a-c364-48bc-afb5-d4f522415243" />
